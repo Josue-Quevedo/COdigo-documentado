@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { test } from "./backend/controllers/palabras.controller.js"
 
 dotenv.config();
 mongoose.connect(process.env.urlbd)
@@ -17,3 +18,4 @@ app.use(cors());
 app.listen(4000, ()=>{
     console.log("Escuchando al servidor")
 })
+test();
